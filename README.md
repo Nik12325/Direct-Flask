@@ -1,37 +1,27 @@
-# nothingness
+# Direct-Flask
 
-This is nothing, just a template for PyPI packages
+Use responses for Flask directly
 
 ## Installation
 
 ### From PyPI
 
 ```sh
-pip3 install nothingness
+pip3 install dflask
 ```
 
 ### From GitHub
 
 ```sh
-pip3 install git+https://github.com/donno2048/nothingness
+pip3 install git+https://github.com/donno2048/Direct-Flask
 ```
 
 ## Usage
 
-### Import fun from \_\_init__.py
-
 ```py
-from nothingness import fun
-```
-
-### Run \_\_main__.py
-
-```sh
-python3 -m nothingness
-```
-
-### Run main from \_\_main__.py
-
-```sh
-nothingness
+from dflask import DirectFlask, Response
+app = DirectFlask(__name__)
+app.add_response("/", Response("<html><head><link href='/style.css' rel='stylesheet'></head><body></body></html>"))
+app.add_response("/style.css", "body{background-color: red;}")
+app.run()
 ```
