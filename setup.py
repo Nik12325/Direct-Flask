@@ -16,6 +16,6 @@ setup(
     },
     python_requires='>=3.0',
     packages=find_packages(),
-    install_requires=["Flask==2.0.1"],
+    install_requires=["Flask>=2.0.1"],
     classifiers=['Programming Language :: Python :: 3']
 )
